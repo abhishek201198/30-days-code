@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnClick</title>
+    <style>
+        #myDiv{
+            width: 100px;
+            height: 100px;
+            background-color:aquamarine ;
+            border: 2px solid black ;
+            border-radius: 10px ;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv" onmouseover="onMouse()">
+
+    </div>
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+ function changeColor(){
+    var div = document.getElementById('myDiv');
+    div.style.backgroundColor="red";
+} 
+
+function onMouse(){
+        var div = document.getElementById('myDiv');
+        div.style.backgroundColor="blue";
+    }
+
+
+    </script>
+</body>
+</html>

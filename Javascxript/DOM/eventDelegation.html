@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <title>eventDelegation</title>
+    <style>
+        body{
+            padding: 20px;
+            background-color: #cc527a;
+        }
+
+        div{
+            padding: 20px;
+            background-color:red;
+            width: max-content;
+
+        }
+
+        span{
+            padding: 20px;
+            background-color: #474747;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <button>Click Me</button>
+        </span>
+    </div>
+    <script>
+        const div = document.getElementsByTagName('div')[0];
+        div.addEventListener('click',(event)=>{            
+          if(event.target.tagName== "BUTTON"){
+            console.log('buton was clicked')
+          }
+         else if(event.target.tagName== "SPAN"){
+            console.log('span was clicked')
+          }
+
+          else{
+            console.log('div was clicked')
+          }
+        })
+    </script>
+</body>
+</html>

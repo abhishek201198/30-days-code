@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in DOM</title>
+</head>
+<body>
+    <div> Top 5 sigmas
+        <ul>
+            <li class="hero">Andrew Tate</li>
+            <li class="hero">Johnny Depp</li>
+            <li class="">Johnny Bravo</li>
+            <li class="">Shinchan</li>
+            <li class="" >Keanu Reeves </li>
+        </ul>
+    </div>
+    <script>
+        // var a = document.getElementsByTagName('li');
+        // console.log(a);
+        var ul = document.querySelector('ul');
+           const newE = document.createElement('li');
+           newE.textContent='Giga Chad';
+           ul.appendChild(newE)
+            </script>
+</body>
+</html>

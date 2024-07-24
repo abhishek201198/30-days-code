@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling</title>
+    <style>
+        body{
+            padding: 20px;
+            background-color: #cc527a;
+        }
+
+        div{
+            padding: 20px;
+            background-color:red;
+            width: max-content;
+
+        }
+
+        span{
+            padding: 20px;
+            background-color: #474747;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <button>Click Me</button>
+        </span>
+    </div>
+    <script>
+          const body = document.getElementsByTagName('body')[0];
+          const div = document.getElementsByTagName('div')[0];
+          const span = document.getElementsByTagName('span')[0];
+          const button = document.getElementsByTagName('button')[0];
+
+              body.addEventListener('click',()=>{
+                console.log('body was click')
+              })
+
+              div.addEventListener('click',()=>{
+                console.log('div was click')
+              })
+
+              span.addEventListener('click',(event)=>{
+                event.stopPropagation()
+                console.log('span was click')
+              })
+
+              button.addEventListener('click',()=>{
+                
+                 console.log('button was click')
+              })
+
+    </script>
+</body>
+</html>

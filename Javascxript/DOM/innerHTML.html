@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHTML & Outer Html</title>
+</head>
+<body>
+    <div> Top 5 sigmas
+        <ul>
+            <li>Abhishek</li>
+            <li>Ravi</li>
+            <li class="hero">Rupesh</li>
+            <li>Suraj</li>
+            <li>Aman</li>
+        </ul>
+
+    </div>
+
+        <script>
+            //  innerHTML 
+            var a = document.querySelector('.hero')
+            a.innerHTML='<i>Kamlesh</i>'
+            console.log(a)
+
+            // OuterHTML
+  
+            var a = document.querySelector('.hero')
+            a.outerHTML='<i>KaOUERmlesh</i>'
+            console.log(a)
+        </script>
+</body>
+</html>
